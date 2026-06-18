@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>FORGE — Fitness Tracker</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- App Styles -->
+  <link rel="stylesheet" href="forge_styles.css">
+</head>
+
+<!-- ONBOARDING -->
+<div id="onboarding">
+<div class="ob-bg"></div><div class="ob-grid"></div>
+<div class="ob-card">
+  <div class="ob-logo">FORGE</div>
+  <div class="ob-tagline">Forged through discipline</div>
+  <div class="dots">
+    <div class="dot active" id="dot0"></div><div class="dot" id="dot1"></div>
+    <div class="dot" id="dot2"></div><div class="dot" id="dot3"></div><div class="dot" id="dot4"></div>
+  </div>
+  <!-- step 0 -->
+  <div class="step active" id="step0">
+    <div class="step-title">Your Body Stats</div>
+    <div class="step-sub">We build a program tailored to your body.</div>
+    <div class="inp-row">
+      <div class="inp-grp"><label>Weight (kg)</label><input class="inp" id="i-weight" type="number" inputmode="decimal" placeholder="75"></div>
+      <div class="inp-grp"><label>Height (cm)</label><input class="inp" id="i-height" type="number" inputmode="decimal" placeholder="175"></div>
+      <div class="inp-grp"><label>Age</label><input class="inp" id="i-age" type="number" inputmode="numeric" placeholder="25"></div>
+      <div class="inp-grp"><label>Gender</label>
+        <select class="inp" id="i-gender"><option value="">Select</option><option value="male">Male</option><option value="female">Female</option><option value="other">Other</option></select>
+      </div>
+    </div>
+    <button class="btn-next" onclick="goStep(0)">CONTINUE →</button>
+  </div>
+  <!-- step 1 -->
+  <div class="step" id="step1">
+    <div class="step-title">Body Type</div>
+    <div class="step-sub">Your physique helps set realistic rep ranges.</div>
+    <div class="cg" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="cc" onclick="sel(this,'bodytype','ecto')"><div class="ico">🦴</div><div class="lbl">Ectomorph</div><div class="sub">Lean & long</div></div>
+      <div class="cc" onclick="sel(this,'bodytype','meso')"><div class="ico">💪</div><div class="lbl">Mesomorph</div><div class="sub">Athletic</div></div>
+      <div class="cc" onclick="sel(this,'bodytype','endo')"><div class="ico">🏋️</div><div class="lbl">Endomorph</div><div class="sub">Stocky</div></div>
+    </div>
+    <button class="btn-next" onclick="goStep(1)">CONTINUE →</button>
+  </div>
+  <!-- step 2 -->
+  <div class="step" id="step2">
+    <div class="step-title">Your Goal</div>
+    <div class="step-sub">What do you want in 12 weeks?</div>
+    <div class="cg">
+      <div class="cc" onclick="sel(this,'goal','bulk')"><div class="ico">⚡</div><div class="lbl">Build Muscle</div><div class="sub">Hypertrophy</div></div>
+      <div class="cc" onclick="sel(this,'goal','cut')"><div class="ico">🔥</div><div class="lbl">Lose Fat</div><div class="sub">Lean out</div></div>
+      <div class="cc" onclick="sel(this,'goal','strength')"><div class="ico">🏆</div><div class="lbl">Get Stronger</div><div class="sub">Raw power</div></div>
+      <div class="cc" onclick="sel(this,'goal','endurance')"><div class="ico">🎯</div><div class="lbl">Endurance</div><div class="sub">Stamina</div></div>
+    </div>
+    <button class="btn-next" onclick="goStep(2)">CONTINUE →</button>
+  </div>
+  <!-- step 3 -->
+  <div class="step" id="step3">
+    <div class="step-title">Gym & Supplements</div>
+    <div class="step-sub">Helps personalise your reminders.</div>
+    <div class="inp-grp" style="margin-bottom:.9rem;">
+      <label>Currently going to gym?</label>
+      <select class="inp" id="i-gym">
+        <option value="">Select</option>
+        <option value="regular">Yes — regularly (3+/week)</option>
+        <option value="casual">Yes — occasionally</option>
+        <option value="starting">No — just starting</option>
+        <option value="returning">Returning after a break</option>
+      </select>
+    </div>
+    <div style="font-size:.72rem;color:var(--text2);text-transform:uppercase;letter-spacing:1px;margin-bottom:.6rem;">Supplements? (multi-select)</div>
+    <div class="cg">
+      <div class="cc" onclick="tsupp(this,'protein')"><div class="ico">🥛</div><div class="lbl">Protein</div><div class="sub">Whey/Casein</div></div>
+      <div class="cc" onclick="tsupp(this,'creatine')"><div class="ico">⚗️</div><div class="lbl">Creatine</div><div class="sub">Monohydrate</div></div>
+      <div class="cc" onclick="tsupp(this,'preworkout')"><div class="ico">🔋</div><div class="lbl">Pre-Workout</div><div class="sub">Caffeine</div></div>
+      <div class="cc" onclick="tsupp(this,'none')"><div class="ico">🌿</div><div class="lbl">None</div><div class="sub">Diet only</div></div>
+    </div>
+    <button class="btn-next" onclick="goStep(3)">CONTINUE →</button>
+  </div>
+  <!-- step 4 -->
+  <div class="step" id="step4">
+    <div class="step-title">Experience Level</div>
+    <div class="step-sub">Honest answers = better programming.</div>
+    <div class="cg" style="grid-template-columns:1fr 1fr 1fr;">
+      <div class="cc" onclick="sel(this,'level','beginner');launch();"><div class="ico">🌱</div><div class="lbl">Beginner</div><div class="sub">0–1 yrs</div></div>
+      <div class="cc" onclick="sel(this,'level','intermediate');launch();"><div class="ico">⚔️</div><div class="lbl">Intermediate</div><div class="sub">1–4 yrs</div></div>
+      <div class="cc" onclick="sel(this,'level','advanced');launch();"><div class="ico">🔱</div><div class="lbl">Advanced</div><div class="sub">4+ yrs</div></div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- APP -->
+<div id="app">
+<header class="app-hdr">
+  <div style="display:flex;align-items:center;gap:.5rem;">
+    <div class="app-logo">FORGE</div>
+    <div class="save-dot" id="saveDot" title="Auto-saved"></div>
+  </div>
+  <div class="hdr-r">
+    <div class="pill streak" onclick="openStreak()">🔥 <span id="streakNum">0</span></div>
+    <div class="pill water" onclick="openWater()">💧 <span id="waterNum">0</span>/8</div>
+    <div class="pill user" id="userPill"><span>—</span></div>
+  </div>
+</header>
+<div class="app-body">
+  <div class="stats-bar" id="statsBar"></div>
+  <div id="missedBanner"></div>
+  <div class="motiv-banner"><span style="font-size:1.3rem;">⚡</span><div class="mot-text" id="motivText"></div></div>
+  <div id="suppBanner"></div>
+  <div class="week-hdr">
+    <div class="sec-title">THIS WEEK</div>
+    <div class="wk-badge" id="wkBadge">WEEK 1</div>
+  </div>
+  <div class="days-grid" id="daysGrid"></div>
+  <div class="wp" id="workoutPanel"></div>
+  <div style="margin-top:1rem;">
+    <div class="sec-title" style="margin-bottom:.4rem;">WEEKLY PROGRESS</div>
+    <div class="week-bars" id="weekBars"></div>
+  </div>
+  <div class="cal-wrap">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.5rem;">
+      <div class="sec-title">CALENDAR</div>
+    </div>
+    <div class="cal-nav">
+      <button class="cal-nav-btn" onclick="calPrev()">← Prev</button>
+      <div class="cal-month-lbl" id="calMonthLbl">—</div>
+      <button class="cal-nav-btn" onclick="calNext()">Next →</button>
+    </div>
+    <div class="cal-grid" id="calGrid"></div>
+  </div>
+
+</div>
+</div>
+
+<!-- EX MODAL -->
+<div class="modal-overlay" id="exOv" onclick="closeEx(event)">
+<div class="modal-sheet">
+  <div class="modal-handle"></div>
+  <div class="modal-hdr">
+    <div><div class="modal-title" id="emTitle">—</div><div class="modal-sub" id="emSub">—</div></div>
+    <button class="modal-close" onclick="closeEx(null)">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="ex-tabs">
+      <div class="ex-tab active" onclick="exTab(this,'ts')">SETS</div>
+      <div class="ex-tab" onclick="exTab(this,'th')">HOW TO</div>
+      <div class="ex-tab" onclick="exTab(this,'tm')">MUSCLES</div>
+      <div class="ex-tab" onclick="exTab(this,'te')">EQUIPMENT</div>
+    </div>
+    <div class="ex-tc active" id="ts"></div>
+    <div class="ex-tc" id="th"></div>
+    <div class="ex-tc" id="tm"></div>
+    <div class="ex-tc" id="te"></div>
+  </div>
+</div>
+</div>
+
+<!-- RELIEVE MODAL -->
+<div class="modal-overlay" id="relOv" onclick="closeRel(event)">
+<div class="modal-sheet">
+  <div class="modal-handle"></div>
+  <div class="modal-hdr">
+    <div><div class="modal-title">💜 Muscle Relief</div><div class="modal-sub" id="relSub">Recovery stretches</div></div>
+    <button class="modal-close" onclick="closeRel(null)">✕</button>
+  </div>
+  <div class="modal-body" id="relBody"></div>
+</div>
+</div>
+
+<!-- TIRED MODAL -->
+<div class="modal-overlay" id="tiredOv" onclick="closeTired(event)">
+<div class="modal-sheet">
+  <div class="modal-handle"></div>
+  <div class="modal-hdr">
+    <div><div class="modal-title">😮‍💨 Too Tired?</div><div class="modal-sub">Defer remaining sets to another day</div></div>
+    <button class="modal-close" onclick="closeTired(null)">✕</button>
+  </div>
+  <div class="modal-body" id="tiredBody"></div>
+</div>
+</div>
+
+<!-- WATER MODAL -->
+<div class="modal-overlay" id="waterOv" onclick="closeWater(event)">
+<div class="modal-sheet" style="max-height:70vh;">
+  <div class="modal-handle"></div>
+  <div class="modal-hdr">
+    <div><div class="modal-title">💧 Water Tracker</div><div class="modal-sub">Aim for 8 glasses (2L) daily</div></div>
+    <button class="modal-close" onclick="closeWater(null)">✕</button>
+  </div>
+  <div class="modal-body" id="waterBody"></div>
+</div>
+</div>
+
+<!-- STREAK MODAL -->
+<div class="modal-overlay" id="streakOv" onclick="closeStreak(event)">
+<div class="modal-sheet" style="max-height:75vh;">
+  <div class="modal-handle"></div>
+  <div class="modal-hdr">
+    <div><div class="modal-title">🔥 Your Streak</div><div class="modal-sub" id="streakSub">Keep the fire alive</div></div>
+    <button class="modal-close" onclick="closeStreak(null)">✕</button>
+  </div>
+  <div class="modal-body" id="streakBody"></div>
+</div>
+</div>
+
+<!-- REST TIMER OVERLAY -->
+<div class="timer-overlay" id="timerOv">
+<div class="timer-card">
+  <div class="timer-title">REST TIMER</div>
+  <div class="timer-ring">
+    <svg viewBox="0 0 140 140" width="140" height="140">
+      <circle class="bg-ring" cx="70" cy="70" r="64"></circle>
+      <circle class="fg-ring" id="timerRing" cx="70" cy="70" r="64" stroke-dasharray="402" stroke-dashoffset="0"></circle>
+    </svg>
+  </div>
+  <div class="timer-display" id="timerDisplay">1:30</div>
+  <div style="font-size:.78rem;color:var(--text2);margin-bottom:.8rem;" id="timerLabel">Rest before next set</div>
+  <button class="timer-dismiss" onclick="stopTimer()">SKIP REST ✕</button>
+</div>
+</div>
+
+  <!-- App Logic -->
+  <script src="forge_app.js"></script>
+</body>
+</html>

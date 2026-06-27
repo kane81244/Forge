@@ -376,42 +376,42 @@ function flashSave(){
 // EXERCISE DATA
 // ════════════════════════════════════════════════════
 const DAYS=[
-  {name:'Chest',short:'CHEST',emoji:'🫀',exercises:[
+  {name:'Chest',short:'CHEST', iconPath:'assets/icons/chest.svg',exercises:[
     {name:'Barbell Bench Press',muscle:'Pecs (Primary)',diff:'hard',sets:3,reps:[8,10,10],rest:90},
     {name:'Incline Dumbbell Press',muscle:'Upper Chest',diff:'medium',sets:3,reps:[12,12,12],rest:75},
     {name:'Cable Flyes',muscle:'Chest Stretch',diff:'easy',sets:3,reps:[15,15,15],rest:60},
     {name:'Push-Ups',muscle:'Full Chest',diff:'easy',sets:3,reps:[15,15,15],rest:60},
     {name:'Dips (Chest)',muscle:'Lower Chest',diff:'medium',sets:3,reps:[10,10,12],rest:75},
   ]},
-  {name:'Back',short:'BACK',emoji:'🔙',exercises:[
+  {name:'Back',short:'BACK',iconPath:'assets/icons/back.svg',exercises:[
     {name:'Deadlift',muscle:'Full Back',diff:'hard',sets:3,reps:[5,5,5],rest:120},
     {name:'Pull-Ups',muscle:'Lats',diff:'hard',sets:3,reps:[8,8,10],rest:90},
     {name:'Barbell Row',muscle:'Mid Back',diff:'medium',sets:3,reps:[10,10,12],rest:75},
     {name:'Seated Cable Row',muscle:'Rhomboids',diff:'easy',sets:3,reps:[15,15,15],rest:60},
     {name:'Face Pulls',muscle:'Rear Delts',diff:'easy',sets:3,reps:[15,15,15],rest:60},
   ]},
-  {name:'Legs',short:'LEGS',emoji:'🦵',exercises:[
+  {name:'Legs',short:'LEGS',iconPath:'assets/icons/legs.svg',exercises:[
     {name:'Barbell Squat',muscle:'Quads / Glutes',diff:'hard',sets:3,reps:[8,8,10],rest:120},
     {name:'Romanian Deadlift',muscle:'Hamstrings',diff:'medium',sets:3,reps:[10,10,12],rest:90},
     {name:'Leg Press',muscle:'Quads',diff:'medium',sets:3,reps:[12,12,15],rest:75},
     {name:'Leg Curls',muscle:'Hamstrings',diff:'easy',sets:3,reps:[15,15,15],rest:60},
     {name:'Standing Calf Raises',muscle:'Calves',diff:'easy',sets:3,reps:[15,15,15],rest:45},
   ]},
-  {name:'Shoulders',short:'DELTS',emoji:'💪',exercises:[
+  {name:'Shoulders',short:'DELTS',iconPath:'assets/icons/shoulders.svg',exercises:[
     {name:'Overhead Press',muscle:'Front Delts',diff:'hard',sets:3,reps:[8,8,10],rest:90},
     {name:'Lateral Raises',muscle:'Side Delts',diff:'easy',sets:3,reps:[15,15,15],rest:60},
     {name:'Arnold Press',muscle:'Full Delt',diff:'medium',sets:3,reps:[10,10,12],rest:75},
     {name:'Upright Rows',muscle:'Traps / Delts',diff:'medium',sets:3,reps:[12,12,12],rest:60},
     {name:'Rear Delt Flyes',muscle:'Posterior Delt',diff:'easy',sets:3,reps:[15,15,15],rest:60},
   ]},
-  {name:'Arms',short:'ARMS',emoji:'🦾',exercises:[
+  {name:'Arms',short:'ARMS',iconPath:'assets/icons/arms.svg',exercises:[
     {name:'Barbell Curl',muscle:'Biceps',diff:'medium',sets:3,reps:[12,12,12],rest:60},
     {name:'Skull Crushers',muscle:'Triceps',diff:'medium',sets:3,reps:[10,10,12],rest:75},
     {name:'Hammer Curls',muscle:'Brachialis',diff:'easy',sets:3,reps:[15,15,15],rest:45},
     {name:'Tricep Pushdown',muscle:'Triceps',diff:'easy',sets:3,reps:[15,15,15],rest:45},
     {name:'Concentration Curls',muscle:'Biceps Peak',diff:'easy',sets:3,reps:[15,15,15],rest:45},
   ]},
-  {name:'Core + Cardio',short:'CORE',emoji:'🔥',exercises:[
+  {name:'Core + Cardio',short:'CORE',iconPath:'assets/icons/cardio.svg',exercises:[
     {name:'Plank',muscle:'Core Stability',diff:'medium',sets:3,reps:[45,45,60],rest:60},
     {name:'Hanging Leg Raises',muscle:'Lower Abs',diff:'hard',sets:3,reps:[10,10,12],rest:75},
     {name:'Cable Crunch',muscle:'Upper Abs',diff:'easy',sets:3,reps:[15,15,15],rest:60},
@@ -422,46 +422,46 @@ const DAYS=[
 
 const RELIEF={
   0:[
-    {icon:'🤲',name:'Doorway Chest Stretch',dur:'30 sec × 3',desc:'Stand in doorway, arms 90°. Lean forward gently. Opens pec minor fully.'},
-    {icon:'🙌',name:'Cross-Body Shoulder Stretch',dur:'20 sec / arm',desc:'Pull one arm across chest. Targets rear delt and pec. Breathe deeply.'},
-    {icon:'🧘',name:"Child's Pose Arms Wide",dur:'60 sec',desc:'Arms wide on mat. Gravity opens chest and front delts passively.'},
-    {icon:'🥎',name:'Foam Roll Thoracic Spine',dur:'90 sec',desc:'Roll mid-back slowly. Pause on tight spots. Counteracts press position.'},
-    {icon:'❄️',name:'Ice / Heat Therapy',dur:'10 min',desc:'Ice within 1hr post-workout. Heat 24h later to increase blood flow.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Doorway Chest Stretch',dur:'30 sec × 3',desc:"How to do it: Stand in a doorway. Put your elbows and forearms flat against the door frame at a 90-degree angle (like a goalpost). Gently step one foot forward and lean your chest into the room until you feel a deep stretch across your chest. Don't force it—keep it smooth."},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Cross-Body Shoulder Stretch',dur:'20 sec / arm',desc:'Pull one arm across chest. Targets rear delt and pec. Breathe deeply.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:"Child's Pose Arms Wide",dur:'60 sec',desc:'Arms wide on mat. Gravity opens chest and front delts passively.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Foam Roll Thoracic Spine',dur:'90 sec',desc:'Roll mid-back slowly. Pause on tight spots. Counteracts press position.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Ice / Heat Therapy',dur:'10 min',desc:'Ice within 1hr post-workout. Heat 24h later to increase blood flow.'},
   ],
   1:[
-    {icon:'🐱',name:'Cat-Cow Stretch',dur:'10 reps slow',desc:'All fours, arch and round spine. Decompresses vertebrae after rows.'},
-    {icon:'🦋',name:"Child's Pose",dur:'60 sec',desc:'Sit back on heels, arms forward. Lengthens lats and erectors.'},
-    {icon:'🔄',name:'Lying Trunk Rotation',dur:'30 sec / side',desc:'Knees bent, drop to each side. Rotates and releases lower back.'},
-    {icon:'🤸',name:'Passive Bar Hang',dur:'30 sec',desc:'Hang completely relaxed. Decompresses spine and lat insertions.'},
-    {icon:'🥎',name:'Foam Roll Lats',dur:'60 sec / side',desc:'Side-lying, armpit to hip. Effective for post-pulldown soreness.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Cat-Cow Stretch',dur:'10 reps slow',desc:'All fours, arch and round spine. Decompresses vertebrae after rows.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:"Child's Pose",dur:'60 sec',desc:'Sit back on heels, arms forward. Lengthens lats and erectors.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Lying Trunk Rotation',dur:'30 sec / side',desc:'Knees bent, drop to each side. Rotates and releases lower back.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Passive Bar Hang',dur:'30 sec',desc:'Hang completely relaxed. Decompresses spine and lat insertions.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Foam Roll Lats',dur:'60 sec / side',desc:'Side-lying, armpit to hip. Effective for post-pulldown soreness.'},
   ],
   2:[
-    {icon:'🧘',name:'Standing Quad Stretch',dur:'30 sec / leg',desc:'Pull heel to glute. Prevents quad and hip flexor stiffening.'},
-    {icon:'🦵',name:'Lying Hamstring Stretch',dur:'40 sec / leg',desc:'Pull leg toward chest with towel. Great for DOMS prevention.'},
-    {icon:'🍑',name:'Pigeon Pose',dur:'60 sec / side',desc:'Opens hip rotators and glutes. Essential after heavy squats.'},
-    {icon:'🥎',name:'Foam Roll Quads & IT Band',dur:'90 sec each',desc:'Slow on quads, pause tight spots. Then outer thigh for knee health.'},
-    {icon:'🚶',name:'Light Walk 5–10 min',dur:'5–10 min',desc:"Low-impact flush of lactic acid. Don't sit still after leg day!"},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Standing Quad Stretch',dur:'30 sec / leg',desc:'Pull heel to glute. Prevents quad and hip flexor stiffening.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Lying Hamstring Stretch',dur:'40 sec / leg',desc:'Pull leg toward chest with towel. Great for DOMS prevention.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Pigeon Pose',dur:'60 sec / side',desc:'Opens hip rotators and glutes. Essential after heavy squats.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Foam Roll Quads & IT Band',dur:'90 sec each',desc:'Slow on quads, pause tight spots. Then outer thigh for knee health.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Light Walk 5–10 min',dur:'5–10 min',desc:"Low-impact flush of lactic acid. Don't sit still after leg day!"},
   ],
   3:[
-    {icon:'🤲',name:'Cross-Body Shoulder Stretch',dur:'30 sec / arm',desc:'Essential after overhead pressing. Hits posterior capsule.'},
-    {icon:'🙆',name:'Overhead Tricep Stretch',dur:'30 sec / arm',desc:'Arm overhead, bend elbow. Other hand pushes back. Releases delts.'},
-    {icon:'🔄',name:'Neck Rolls',dur:'30 sec / dir',desc:'Slow deliberate circles. Releases trap and upper delt tension.'},
-    {icon:'💆',name:'Upper Trap Stretch',dur:'30 sec / side',desc:'Tilt head to side, hold. Lengthens upper trap and neck.'},
-    {icon:'🥶',name:'Contrast Shower Therapy',dur:'Hot 2min/Cold 30s × 3',desc:'Alternate hot and cold on shoulder area. Pumps blood in and out.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Cross-Body Shoulder Stretch',dur:'30 sec / arm',desc:'Essential after overhead pressing. Hits posterior capsule.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Overhead Tricep Stretch',dur:'30 sec / arm',desc:'Arm overhead, bend elbow. Other hand pushes back. Releases delts.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Neck Rolls',dur:'30 sec / dir',desc:'Slow deliberate circles. Releases trap and upper delt tension.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Upper Trap Stretch',dur:'30 sec / side',desc:'Tilt head to side, hold. Lengthens upper trap and neck.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Contrast Shower Therapy',dur:'Hot 2min/Cold 30s × 3',desc:'Alternate hot and cold on shoulder area. Pumps blood in and out.'},
   ],
   4:[
-    {icon:'🤲',name:'Wrist Flexor Stretch',dur:'30 sec / arm',desc:'Extend arm, pull fingers back. Reduces elbow tendon stress.'},
-    {icon:'💪',name:'Bicep Wall Stretch',dur:'30 sec / arm',desc:'Palm flat on wall behind, turn away. Deep bicep stretch post-curls.'},
-    {icon:'⬇️',name:'Tricep Overhead Stretch',dur:'30 sec / arm',desc:'Reach behind head, push elbow back. Lengthens tricep long head.'},
-    {icon:'🧊',name:'Cold Pack on Elbows',dur:'10 min',desc:'Skull crushers stress elbows. Cold pack reduces joint inflammation.'},
-    {icon:'🤸',name:'Active Wrist Circles',dur:'30 sec / dir',desc:'Slow controlled circles. Keeps forearm flexibility.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Wrist Flexor Stretch',dur:'30 sec / arm',desc:'Extend arm, pull fingers back. Reduces elbow tendon stress.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Bicep Wall Stretch',dur:'30 sec / arm',desc:'Palm flat on wall behind, turn away. Deep bicep stretch post-curls.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Tricep Overhead Stretch',dur:'30 sec / arm',desc:'Reach behind head, push elbow back. Lengthens tricep long head.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Cold Pack on Elbows',dur:'10 min',desc:'Skull crushers stress elbows. Cold pack reduces joint inflammation.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Active Wrist Circles',dur:'30 sec / dir',desc:'Slow controlled circles. Keeps forearm flexibility.'},
   ],
   5:[
-    {icon:'🧘',name:'Cobra Pose',dur:'30 sec × 3',desc:'Push up from floor. Opens hip flexors, decompresses lumbar spine.'},
-    {icon:'🔄',name:'Lying Trunk Rotation',dur:'30 sec / side',desc:'Releases obliques and QL after Russian twists and planks.'},
-    {icon:'🤸',name:'Diaphragmatic Breathing',dur:'2 min',desc:'Breathe deep into belly. Resets core after HIIT intervals.'},
-    {icon:'🦵',name:'Hip Flexor Lunge Stretch',dur:'40 sec / side',desc:'Low lunge, lean forward. Counters hip flexor tightening from raises.'},
-    {icon:'💆',name:'Full Body Savasana',dur:'3–5 min',desc:'Lie completely still. Signals nervous system recovery.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Cobra Pose',dur:'30 sec × 3',desc:'Push up from floor. Opens hip flexors, decompresses lumbar spine.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Lying Trunk Rotation',dur:'30 sec / side',desc:'Releases obliques and QL after Russian twists and planks.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Diaphragmatic Breathing',dur:'2 min',desc:'Breathe deep into belly. Resets core after HIIT intervals.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Hip Flexor Lunge Stretch',dur:'40 sec / side',desc:'Low lunge, lean forward. Counters hip flexor tightening from raises.'},
+    {icon:'assets/icons/in-app/muscle-relief.svg',name:'Full Body Savasana',dur:'3–5 min',desc:'Lie completely still. Signals nervous system recovery.'},
   ],
 };
 
@@ -684,7 +684,7 @@ function buildStats(){
     <div class="sc"><div class="sc-lbl">BMI</div><div class="sc-val">${bmi}</div></div>
     <div class="sc"><div class="sc-lbl">Week</div><div class="sc-val">${S.week}<small>/12</small></div></div>
     <div class="sc"><div class="sc-lbl">Volume+</div><div class="sc-val">+${Math.round((prog-1)*100)}<small>%</small></div></div>
-    <div class="sc"><div class="sc-lbl">🔥Streak</div><div class="sc-val">${calcStreak()}<small>d</small></div></div>
+    <div class="sc"><div class="sc-lbl"><img src="assets/icons/in-app/streak.svg" style="width:14px;height:14px; vertical-align:middle; margin-right:4px;" alt="Streak">Streak</div><div class="sc-val">${calcStreak()}<small>d</small></div></div>
   `;
 }
 function buildMotiv(){document.getElementById('motivText').innerHTML=MOTIVATIONS[Math.floor(Math.random()*MOTIVATIONS.length)];}
@@ -696,7 +696,7 @@ function buildMissedBanner(){
 }
 function buildSuppBanner(){
   if(!S.supplements.length||S.supplements.includes('none')){document.getElementById('suppBanner').innerHTML='';return;}
-  const info={protein:'💊 Protein 30min post-workout',creatine:'⚗️ Creatine daily',preworkout:'⚡ Pre-workout 20min before'};
+  const info={protein:'<img src="assets/icons/in-app/protein.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Protein"/> Protein 30min post-workout',creatine:'<img src="assets/icons/in-app/creatine.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Creatine"/> Creatine daily',preworkout:'<img src="assets/icons/in-app/preworkout.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Pre-workout"/> Pre-workout 20min before'};
   const tags=S.supplements.filter(s=>info[s]).map(s=>`<span class="supp-tag">${info[s]}</span>`).join('');
   document.getElementById('suppBanner').innerHTML=`<div class="supp-banner"><span style="font-size:.68rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;">Today:</span>${tags}</div>`;
 }
@@ -830,7 +830,10 @@ function buildPanel(di){
     <div class="wp-hdr">
       <div>
         <div class="wp-daytag">DAY ${di+1}</div>
-        <div class="wp-title">${day.emoji} ${day.name} Day</div>
+        <div class="wp-title">
+         <img src="${day.iconPath || ''}" class="wp-icon-vector" alt"" oneerror="this.style.display='none'">
+         <span>${day.name} Day</span>
+        </div>
         <div class="wp-sub">${day.exercises.length} exercises · Week ${S.week} · +${Math.round((prog-1)*100)}%</div>
       </div>
       <div>
@@ -839,9 +842,9 @@ function buildPanel(di){
       </div>
     </div>
     <div class="wp-actions">
-      <button class="wpa relieve" onclick="openRelieve(${di})">💜 Muscle Relief</button>
+      <button class="wpa relieve" onclick="openRelieve(${di})"><img src="assets/icons/in-app/muscle-relief.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Muscle Relief"/> Muscle Relief</button>
       <button class="wpa tired" onclick="openTired(${di})" ${dayDone?'disabled':''} title="${canTired?'Defer remaining':'Need ≥ half sets first'}">
-        ${canTired?'😮‍💨 Too Tired':'😮‍💨 Need ≥50% done'}
+        ${canTired?'<img src="assets/icons/in-app/too-tired.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Too Tired"/> Too Tired':'<img src="assets/icons/in-app/need-more-done.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Need More Done"/> Need ≥50% done'}
       </button>
     </div>
     <div class="ex-list">${exH}</div>
@@ -1145,7 +1148,7 @@ function logWater(i){
   S.waterToday=i+1;
   document.getElementById('waterNum').textContent=S.waterToday;
   saveState();openWater();
-  if(S.waterToday>=8)toast('💧 Hydrated!','Goal reached! 🏆');
+  if(S.waterToday>=8)toast('<img src="assets/icons/in-app/water.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Hydrated"/> Hydrated!','Goal reached! 🏆');
 }
 function closeWater(ev){
   if(ev&&ev.target!==document.getElementById('waterOv'))return;
@@ -1153,17 +1156,17 @@ function closeWater(ev){
   document.body.style.overflow='';
 }
 function startWaterReminder(){
-  setInterval(()=>{if(S.waterToday<8)toast('💧 Hydration','Drink water! '+S.waterToday+'/8 glasses','blue');},30*60*1000);
+  setInterval(()=>{if(S.waterToday<8)toast('<img src="assets/icons/in-app/water.svg" style="width:14px; height:14px; vertical-align:middle; margin-right:4px;" alt="Hydration"/> Hydration','Drink water! '+S.waterToday+'/8 glasses','blue');},30*60*1000);
 }
 
 // ════════════════════════════════════════════════════
 // STREAK
-// ════════════════════════════════════════════════════
+// ════════════════════════════════════
 function openStreak(){
   const streak=calcStreak();
   document.getElementById('streakSub').textContent=`${streak} day streak!`;
   const recent=[...S.streakDates].sort().reverse().slice(0,10);
-  let h=`<div class="streak-big"><div style="font-size:3rem;">🔥</div><div class="streak-num">${streak}</div><div style="font-size:.82rem;color:var(--text2);">consecutive workout days</div></div>`;
+  let h=`<div class="streak-big"><div style="font-size:3rem;"><img src="assets/icons/in-app/streak.svg" style="width:150px; height:150px; vertical-align:middle; margin-right:4px;" alt="Streak"/></div><div class="streak-num">${streak}</div><div style="font-size:.82rem;color:var(--text2);">consecutive workout days</div></div>`;
   h+=`<div style="font-size:.7rem;color:var(--text3);text-transform:uppercase;letter-spacing:1px;margin-bottom:.6rem;">Recent workouts</div>`;
   h+=`<div class="streak-dates-list">`;
   if(recent.length){
@@ -1206,12 +1209,13 @@ function buildWeekBars(){
 }
 
 let calM=new Date().getMonth(),calY=new Date().getFullYear();
-function calPrev(){calM--;if(calM<0){calM=11;calY--;}buildCal();}
-function calNext(){calM++;if(calM>11){calM=0;calY++;}buildCal();}
+function calPrev(){S.calMonth--; if(S.calMonth<0){S.calMonth=11;S.calYear--;}buildCal();
+}
+function calNext(){S.calMonth++; if(S.calMonth>11){S.calMonth=0;S.calYear++;}buildCal();}
 function buildCal(){
   const now=new Date();
-  const first=new Date(calY,calM,1);
-  const days=new Date(calY,calM+1,0).getDate();
+  const first=new Date(S.calYear,S.calMonth,1);
+  const days=new Date(S.calYear,S.calMonth+1,0).getDate();
   const startOff=first.getDay()===0?6:first.getDay()-1;
   const mName=first.toLocaleDateString('en',{month:'long',year:'numeric'});
   document.getElementById('calMonthLbl').textContent=mName;
@@ -1219,7 +1223,7 @@ function buildCal(){
   ['M','T','W','T','F','S','S'].forEach(d=>{h+=`<div class="cal-head">${d}</div>`;});
   for(let i=0;i<startOff;i++)h+=`<div class="cal-cell empty"></div>`;
   for(let d=1;d<=days;d++){
-    const iso=`${calY}-${String(calM+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const iso=`${S.calYear}-${String(S.calMonth+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
     const isToday=iso===todayISO();
     const worked=S.streakDates.includes(iso);
     const missed=S.missedDates.includes(iso);

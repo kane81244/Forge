@@ -289,3 +289,15 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;min
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:var(--bg);}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:2px;}
+
+.wp-title{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.wp-icon-vector{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
